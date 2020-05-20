@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.ico">
+  <title>Search</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .box{
+      margin-top:100px;
+      margin-left:35%;
+      margin-right:35%;
+      border:1px solid black;
+      border-radius:10px;
+    }
+    .text1{
+      margin-top:20px;
+      color:black;
+      text-align:center;
+      font-family:exo;
+    }
+    #expression{
+      text-align:center;
+      padding-right:10px;
+      color: black;
+      margin-top:30px;
+      font-size:20px;
+      border: none;
+      background-color:transparent;
+      font-family:exo;
+      border-bottom:2px solid black;
+      overflow:hidden;
+      display:block;
+      color:grey;
+    }
+    @keyframes example{
+ 0%{
+      transform:rotate(0deg);
+    }
+ 100%{  transform:  rotate(360deg);
+       }}
+    input:focus{
+      outline:none;
+    }
+    .text4 {
+      font-family: "arial";
+      font-size: 14px;
+      color:black;
+      margin-top:40px;
+    }
+    .link1{
+     color:black;
+
+     padding:10px;
+     position:relative;
+      top:16px;
+       }
+    .link1:hover{
+        color:black;
+        padding:10px;
+        position:relative;
+        top:16px;
+        border-bottom: 2px solid #00ccff;
+        border-top: 2px dotted #00ccff;
+      }
+      .text2 {
+        animation: colorchange 1s infinite;
+        font-size: 30px;
+        word-spacing: 3px;
+        position:relative;
+        top:20px;
+        font-family: "exo", "bell mt";
+        color: #00ccff;
+      }
+
+      @keyframes colorchange {
+        0% {
+          color: #00ccff;
+           }
+        50% {
+          color: orange;        }
+
+      }
+      select{
+        padding-right:10px;
+        padding-left:10px;
+        border:none;
+        background-color:transparent;
+        font-family:exo;
+        color:black;
+        position:relative;
+        top:30px;
+        
+         }
+    .but1{
+       border:none;border:2px solid black; background-color:transparent;margin-top:20px;border-radius:10px;color:black;font-family:exo;padding-left:10px;padding-right:10px;padding-top:5px;padding-bottom:5px;
+    }
+    .but1:hover{
+      box-shadow:2px 2px 5px black;cursor:pointer;}
+    .but1:active{
+      box-shadow:none;
+      transition:0.1s;
+      border:2px solid black;
+      background-color:black;
+
+    }
+    .but1:focus{
+      outline:none;
+    }
+  </style>
+  <script>
+    function f1()
+    {var x=document.getElementById("inp2").value;
+      if(x=="number")
+        document.getElementById("expression").placeholder="Search by At.Number";
+        if(x=="name")
+          document.getElementById("expression").placeholder="Search by Element";
+    }
+    function f2()
+    {
+      var y=document.getElementById("expression").value;
+      var ele=y.toLowerCase()+".html";
+      if(y=="")
+           document.getElementById("expression").placeholder="Please enter valid one";
+      else
+           document.getElementById("search_link").href=ele;
+
+    }
+
+
+  </script>
+</head>
+<body bgcolor>
+
+  <div class="box">
+    <center>
+
+      <img style="position:relative;z-index:-1;animation:example 2s linear infinite;"src="rad.png" width="50px" />
+
+    <p class="text1">
+      SPIDER8019
+      </p>
+    <p class="text1" style="font-size:40px;margin-top:20px;">
+      Periodic Table
+      </p>
+
+    <select id="inp2" onchange="f1()">
+      <option value="name">Element Name</option>
+      <option value="number">Atomic Number</option>
+    </select>
+    </br>
+    <input id="expression" style="padding-top:20px;"type="text" placeholder="Enter element name" />
+
+  </br>
+
+
+   <a id="search_link" href=""><button class="but1" onclick="f2()">Search</button></a>
+      <p class="text2">FOLLOW US</p></br>
+
+
+
+      <a  class="link1" href="https://instagram.com/gururandhawa/?hl=en" target="_blank"><dfn title="SPIDER8019.WHEELS/Instagram official"</dfn>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a class="link1" href="https://instagram.com/gururandhawa/?hl=en" target="_blank"><dfn title="SPIDER8019.WHEELS/Youtube official"</dfn>
+        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+      </a>
+      <a class="link1" href="https://instagram.com/gururandhawa/?hl=en" target="_blank"><dfn title="SPIDER8019.WHEELS/Facebook official"</dfn>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <a class="link1" href="https://instagram.com/gururandhawa/?hl=en" target="_blank"><dfn title="SPIDER8019/PERIODIC TABLE/Snapchat official"</dfn>
+        <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+      </a>
+      <a class="link1" href="https://instagram.com/gururandhawa/?hl=en" target="_blank"><dfn title="SPIDER8019.WHEELS/Twitter official"</dfn>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+      <p class="text4" style="padding-bottom:10px;"></br>@2020,SPIDER8019. All Rights are reserved</p>
+
+    </center>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prata">
+  <title>Property value | SPIDER8019 | Periodic Table</title>
+
+<style>
+html{scroll-behavior:smooth;}
+.table1{position:relative;top:40px;}
+.td{border:2px solid black;font-size:2vw;padding-left:5px;
+  padding-top:10px;
+  padding-bottom:10px;
+  color:black;
+  text-align:center;
+  border-radius:2px;
+
+}
+.abcd
+{color:black;text-align:right;font-family:prata;}
+.abcd1:active{background-color:grey;}
+.abcd1:focus{outline:none;}
+.abcd1{margin-top:5%;background-color:transparent;display:block;position:relative;color:black;font-size:15px;font-family:arial;text-decoration:none;padding:10px 17px;border:1px solid black;}
+.abcd1:hover{
+transition:0.1s;
+color:white;}
+.abcd1::before{
+background-color:black;
+content:"";
+position:absolute;
+top:50%;
+left:0%;
+transition:all 0.2s ease;
+transform:translate(0%,-50%);
+width:0;
+height:100%;
+z-index:-1;
+}
+.abcd1:hover::before{
+width:100%;
+}
+#linkselall{color:black;background-color:transparent;font-family:arial;font-size:13px;padding:1px 13px;border:1px solid black;text-decoration:none;position:absolute;margin-top:-19px;margin-left:210px;}
+#linkselall:focus{outline:none;}
+#linkselall:active{background-color:black;color:white;}
+#abcd3{
+color:black;
+text-align:center;
+font-family:exo;
+margin-top:100px;}
+@keyframes lg1{
+0%{background-position:0%,50%;
+ }
+50%{background-position:100%,50%;
+ }
+100%{
+background-position:0%,50%;}
+}
+
+</style>
+
+<script>
+
+ var proval=[["Hydrogen",1,1312.05],["Helium",2,2372.32],["Lithium",3,520],["Berellium",4,899.50],["Boron",12,801.64],["Carbon",6,1086.45],["Nitrogen",7,1402.33],["Oxygen",8,1313.94],["Flourine",9,1681.05],["Neon",10,2080.66],["Sodium",1,496],["Magnesium",1,738],["Alumunium",1,578],["Silicon",3,786],["Phosphorus",1,1012],["Sulphur",1,1000],["Chlorine",5,1251.7],["Argon",1,1521],["Potassium",1,1312.05],["Calcium",3,2372.32],["Scandium",1,631],["Titanium",1,1312.05],["Vanadium",3,2372.32],["Chromium","NV",520],["Mangnese",1,1312.05],["Iron",3,2372.32],["Cobalt",1,520],["Nickel",1,1312.05],["Copper",3,2372.32],["Zinc",1,520],["Gallium",1,578.8],["Germanium",2,762],["Arsenic",3,947.0],["Selenium",4,941.0],["Bromine",5,1139.9],["Krypton",6,1350.8],["Rubidium",7,403.0],["Strontium",6,549.5],["Yttrium",9,600],["Zirconium",10,640.1],["Niobium",1,652.1],["Molybdenum",1,684.3],["Technetium",1,702],["Ruthenium",3,710.2],["Rhodium",1,719.7],["Palladium",1,804.4],["Silver",5,731.0],["Cadmium",1,558.3],["Indium",1,558.3],["Tin",3,708.6],["Antimony",1,834],["Tellurium",1,869.3],["Iodine",3,1008.4],["Xenon","NV",1170.4],["Cesium",1,375.7],["Barium",3,502.9],["Cerium",1,1],["Praseodymium",1,1],["Neodymium",1,1],["Promethium",1,1],["Samarium",1,1],["Europium",1,1],["Gadolinium",1,1],["Terbium",1,1],["Dysprosium",1,1],["Holmium",1,1],["Erbium",1,1],["Thulium",1,1],["Ytterbium",1,1],["Lutetium",1,1],["Hafnium",1,1312.05],["Tantalum",3,2372.32],["Tungston",1,520],["Rhenium",1,1312.05],["Osmium",2,2372.32],["Iridium",3,520],["Platinum",4,899.50],["Gold",5,801.64],["Mercury",6,1086.45],["Thallium",7,1402.33],["Lead",8,1313.94],["Bismuth",9,1681.05],["Polonium",10,2080.66],["Astatine",1,496],["Radon",1,738],["Francium",1,578],["Radium",3,786],["Actinium",1,1012],["Thorium",1,1000],["Protactinium",5,1251.7],["Uranium",1,1521],["Neptunium",1,1312.05],["Plutonium",3,2372.32],["Amercium",1,631],["Curium",1,1312.05],["Berkelium",3,2372.32],["Californium","NV",520],["Einstenium",1,1312.05],["Fermium",3,2372.32],["Mendelivium",1,520],["Nobelium",1,1312.05],["Lawrencium",3,2372.32],["Zinc",1,520],["Hydrogen",1,1312.05],["Helium",2,2372.32],["Lithium",3,520],["Berellium",4,899.50],["Boron",5,801.64],["Carbon",6,1086.45],["Nitrogen",7,1402.33],["Oxygen",8,1313.94],["Flourine",9,1681.05],["Neon",10,2080.66],["Sodium",1,496],["Magnesium",1,738],["Alumunium",1,578],["Silicon",3,786],["Phosphorus",1,1012],["Sulphur",1,1000],["Argon",1,1521],["Potassium",1,1312.05],["Calcium",3,2372.32],["Scandium",1,631],["Titanium",1,1312.05],["Vanadium",3,2372.32],["Chromium","NV",520],["Mangnesium",1,1312.05],["Iron",3,2372.32],["Cobalt",1,520],["Nickel",1,1312.05]];
+ function sort()
+  {
+    ///guru randhawa
+    ///
+    document.getElementById("abcd2").innerHTML="";
+    document.getElementById("abcd4").innerHTML="";
+     var count=0;
+    var checkbox=document.getElementsByName("opt");
+    
+     
+    var givpro=document.getElementById("inp2").value;
+    var l=checkbox.length;
+    for(var i=0;i<l;i++)
+    { if(checkbox[i].type=='checkbox' && checkbox[i].checked==true)
+         count++;
+    }
+   if(count==0)
+   {document.getElementById("abcd3").innerHTML="Please select elements or property";
+   }
+   else
+    {document.getElementById("abcd3").innerHTML="After processing";
+     for(var i=0;i<l;i++)
+     { if(checkbox[i].type=='checkbox' && checkbox[i].checked==true)
+        {document.getElementById("abcd2").innerHTML+=proval[i][0]+"</br>";
+         document.getElementById("abcd4").innerHTML+=proval[i][givpro];
+         if(givpro==2)
+          {
+           document.getElementById("abcd4").innerHTML+=" kJ/mol";
+          }
+         document.getElementById("abcd4").innerHTML+="</br>";
+         
+         }
+      }
+     }
+    }
+function susall()
+  {var checkbox=document.getElementsByName("opt");
+   var l=checkbox.length;
+   if(document.getElementById("linkselall").innerHTML=="Select all")
+    {for(var i=0;i<l;i++)
+      checkbox[i].checked=true;
+      document.getElementById("linkselall").innerHTML="Unselect all";
+    } 
+   else if(document.getElementById("linkselall").innerHTML=="Unselect all")
+    {for(var i=0;i<l;i++)
+      checkbox[i].checked=false;
+      document.getElementById("linkselall").innerHTML="Select all";
+    } 
+   }
+</script>
+
+</head>
+<body bgcolor="white">
+
+<div class="abcd">
+ Select property and then elements by clicking on <b>"Checkbox"</b> and then click <b>"Next"</b> Button
+</div>
+
+<div style="width:200px;">
+  <select id="inp2">    <option value="0">Select Property:</option>
+    <option value="1">Electronegativity</option>
+    <option value="2">First Ionisation Enthalphy</option>
+
+  </select>
+</div>
+<button id="linkselall" onclick="susall()">Select all</button>
+  
+<table class="table1" align="center">
+  <tr>
+    <td class="td">H<input name="opt" type="checkbox" /></td>
+    <td style="border:none;"></td>
+   <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">13</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">14</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">15</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">16</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">17</td>
+
+    <td class="td p gas noble">He<input name="opt" type="checkbox" /></td>
+  </tr>
+  <tr>
+    <td class="td s solid metal">Li<input name="opt" type="checkbox" /></td>
+    <td class="td s solid metal">Be<input name="opt" type="checkbox" /></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td class="td p metalloid">B<input name="opt" type="checkbox" /></td>
+    <td class="td p solid nonmetal">C<input name="opt" type="checkbox" /></td>
+    <td class="td p gas">N<input name="opt" type="checkbox" /></td>
+    <td class="td p gas">O<input name="opt" type="checkbox" /></td>
+    <td class="td p gas">F<input name="opt" type="checkbox" /></td>
+    <td class="td p gas noble">Ne<input name="opt" type="checkbox" /></td>
+
+  </tr>
+  <tr>
+    <td class="td s solid metal">Na<input name="opt" type="checkbox" /></td>
+    <td class="td s solid metal">Mg<input name="opt" type="checkbox" /></td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">3</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">4</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">5</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">6</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">7</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">8</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">9</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">10</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">11</td>
+    <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">12</td>
+    <td class="td p solid metal">Al<input name="opt" type="checkbox" /></td>
+    <td class="td p metalloid">Si<input name="opt" type="checkbox" /></td>
+    <td class="td p solid">P<input name="opt" type="checkbox" /></td>
+    <td class="td p solid">S<input name="opt" type="checkbox" /></td>
+    <td class="td p gas">Cl<input name="opt" type="checkbox" /></td>
+    <td class="td p gas noble">Ar<input name="opt" type="checkbox" /></td>
+  </tr>
+  <tr>
+    <td class="td s solid metal">K<input name="opt" type="checkbox" /></td>
+    <td class="td s solid metal">Ca<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">Sc<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">Ti<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">V<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Cr<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Mn<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Fe<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Co<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Ni<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Cu<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Zn<input name="opt" type="checkbox" /></td>
+    <td class="td p metal liquid">Ga<input name="opt" type="checkbox" /></td>
+    <td class="td p metalloid">Ge<input name="opt" type="checkbox" /></td>
+    <td class="td p metalloid">As<input name="opt" type="checkbox" /></td>
+    <td class="td p">Se<input name="opt" type="checkbox" /></td>
+    <td class="td p liquid">Br<input name="opt" type="checkbox" /></td>
+    <td class="td p gas noble">Kr<input name="opt" type="checkbox" /></td>
+  </tr>
+  <tr>
+    <td class="td s metal">Rb<input name="opt" type="checkbox" /></td>
+    <td class="td s metal">Sr<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Y<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Zr<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Nb<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Mo<input name="opt" type="checkbox" /></td>
+    <td class="td d metal radioactive">Tc<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Ru<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Rh<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Pd<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Ag<input name="opt" type="checkbox" /></td>
+    <td class="td d metal">Cd<input name="opt" type="checkbox" /></td>
+    <td class="td p metal">In<input name="opt" type="checkbox" /></td>
+    <td class="td p metal">Sn<input name="opt" type="checkbox" /></td>
+    <td class="td p metalloid">Sb<input name="opt" type="checkbox" /></td>
+    <td class="td p metalloid">Te<input name="opt" type="checkbox" /></td>
+    <td class="td p nonmetal">I<input name="opt" type="checkbox" /></td>
+    <td class="td p gas noble">Xe<input name="opt" type="checkbox" /></td>
+  </tr>
+  <tr>
+    <td class="td s solid metal">Cs<input name="opt" type="checkbox" /></td>
+    <td class="td s solid metal">Ba<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">La<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">Hf<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">Ta<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">W<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">Re<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">Os<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">Ir<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">Pt<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">Au<input name="opt" type="checkbox" /></td>
+    <td class="td d liquid metal">Hg<input name="opt" type="checkbox" /></td>
+    <td class="td p solid metal">Tl<input name="opt" type="checkbox" /></td>
+    <td class="td p solid metal">Pb<input name="opt" type="checkbox" /></td>
+    <td class="td p solid metal">Bi<input name="opt" type="checkbox" /></td>
+    <td class="td p metalloid radioactive">Po<input name="opt" type="checkbox" /></td>
+    <td class="td p solid metal radioactive">At<input name="opt" type="checkbox" /></td>
+    <td class="td p gas noble radioactive">Rn<input name="opt" type="checkbox" /></td>
+  </tr>
+  <tr>
+    <td class="td s solid metal">Fr<input name="opt" type="checkbox" /></td>
+    <td class="td s solid metal radioactive">Ra<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">Ac<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal">Rf<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal radioactive">Db<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal radioactive">Sg<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal radioactive">Bh<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal radioactive">Hs<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal radioactive">Mt<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal radioactive">Ds<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal radioactive">Rg<input name="opt" type="checkbox" /></td>
+    <td class="td d solid metal radioactive">Cn<input name="opt" type="checkbox" /></td>
+    <td class="td p solid metal radioactive">Nh<input name="opt" type="checkbox" /></td>
+    <td class="td p solid metal radioactive">Fl<input name="opt" type="checkbox" /></td>
+    <td class="td p solid metal radioactive">Mc<input name="opt" type="checkbox" /></td>
+    <td class="td p solid metal radioactive">Lv<input name="opt" type="checkbox" /></td>
+    <td class="td p solid metal radioactive">Ts<input name="opt" type="checkbox" /></td>
+    <td class="td p gas noble radioactive">Og<input name="opt" type="checkbox" /></td>
+  </tr>
+  <tr>
+    <td style="color:black;border:none;"></td>
+  </tr>
+  <tr>
+    <td style="color:black;border:none;margin-top:20px;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td class="td f solid metal">Ce<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Pr<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Nd<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal radioactive">Pm<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Sm<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Eu<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Gd<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Tb<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Dy<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Ho<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Er<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Tm<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Yb<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Lu<input name="opt" type="checkbox" /></td>
+    <td style="color:black;border:none;"></td>
+  </tr>
+  <tr>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td style="color:black;border:none;"></td>
+    <td class="td f solid metal radioactive">Th<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Pa<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal radioactive">U<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal radioactive">Np<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Pu<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal radioactive">Am<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal radioactive">Cm<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal radioactive">Bk<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal radioactive">Cf<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Es<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Fm<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal radioactive">Md<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">No<input name="opt" type="checkbox" /></td>
+    <td class="td f solid metal">Lr<input name="opt" type="checkbox" /></td>
+    <td style="color:black;border:none;"></td>
+  </tr>
+</table>
+ <a href="#afterprocessing"><button class="abcd1" onclick="sort()" style="float:right;">NEXT</button></a>
+</br>
+<p id="abcd3"></p>
+<div id="afterprocessing">
+<center>
+ <table id="table2" style="padding-left:10px;font-family:exo;width:1000px;animation:lg1 50s ease infinite;background:linear-gradient(-45deg,#33ffc4,#3df2f2,#088181,#9bc400,#F79D00);background-size:400%,400%;border-radius:2px;border:none;color:white;">
+   <tr>  
+    <td id="abcd2" style="font-family:exo;font-size:13px;"></td>
+    <td id="abcd4" style="font-family:exo;font-size:13px;"></td>
+   </tr>
+ </table>
+</div> 
+</center>
+<div style="text-align:right;padding-right:20px;"><i>source of info.: </i><img style="position:relative;top:10px;" src="iit.png" width="70";/></div>
+
+
+</p>
+</body>
+</html>

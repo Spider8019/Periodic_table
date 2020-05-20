@@ -2,65 +2,109 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
   <link rel="shortcut icon" type="image/png" href="favicon.ico">
   <title>Periodic Table</title>
   <style>
+  * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+    }
 
-  .noble{background-color:white;border-color:white;color:black;}
-  table{
+.text2 {font-size: 50px;word-spacing: 3px;font-family: "exo", "bell mt";color: #00ccff;}
+.text3 {
+  position:relative;
+  top:20px;
+  font-size: 20px;
+  word-spacing: 3px;
+  font-family: "arial", "bell mt";
+  color:white;
+}
+.text4 {
+  font-family: "arial";
+  font-size: 14px;
+  color:white;
+}
+.search{
+margin-top:8px;
+background-color:transparent;
+display:block;
+position:relative;
+color:black;
+font-size:15px;
+font-family:exo;
+content-alignment:center;
+text-decoration:none;
+}
+.search:hover{
+transition:0.1s;
+}
+
+.search::before{
+background-color:black;
+content:"";
+position:absolute;
+top:100%;
+left:50%;
+transition:all 0.2s ease;
+transform:translate(-50%,-50%);
+width:0;
+height:1px;
+z-index:-1;
+}
+.search:hover::before{width:100%;}
+.noble{background-color:white;background-color:black;color:white;}
+table{
     position:relative;
-    top:40px;
-  }
-  td{
-    border:2px solid white;
+    top:20px;
+}
+td{
+    border:2px solid black;
     font-size:2vw;
     padding:10px 13px;
-    color:white;
+    color:black;
     text-align:center;
     border-radius:2px;
 
   }
-  select{
+select{
     float:right;
     border:none;
     border-bottom:2px solid white;
     background-color:transparent;
-    color:white;
+    color:black;
     font-family:exo;
   }
- option{
+option{
     color:black;
   }
-  #but1{
+#but1{
     float:right;
     border:none;
     border-bottom:2px solid white;
-    color:white;
+    color:black;
     background-color:transparent;
     margin-left:-10px;
   }
-  #but1:focus{
+#but1:focus{
     outline:none;
   }
 
-  #text1{
-    font-family:exo;
-    color:white;
 
-  }
-  #img1{
+#img1{
     background-color:white;
     float:right;
     width:15px;
     cursor:pointer;
   }
   /*dropdown content css cod3*/
-  .dropdown {
+.dropdown {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -68,22 +112,18 @@
   min-width: 100px;
   border:1px solid black;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 1px 5px;
+  padding: 10px 15px;
   z-index: 1;
   border-radius:5px;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
+.dropdown:hover .dropdown-content {display: block;}
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 10px 10px;
   overflow: hidden;
   background-color:Transparent;
-  position: sticky;
   top: 0;
 }
 
@@ -95,31 +135,17 @@ li:last-child {
 
 li a {
   display: block;
-  font-size:13px;
+  font-size:15px;
   font-family:exo;
-  color: white;
+  color: black;
   text-align: center;
-  padding-top:10px;
-  padding-right:20px;
-    text-decoration: none;
+  text-decoration: none;
 }
-
-li a:hover:not(.active) {
-  color: #00ccff;
-  transition:0.3s;
+text1 {float:left;font-size: 15px;font-family:exo;
+  color: black;
 }
-
-.active {
-  color:orange;
-  font-style:italic;
-}
-text1 {
-  float:left;
-  font-size: 15px;
-  font-family:exo;
-  padding:10px 10px;
-  color: white;
-}
+.link1{color:white;padding:10px;position:relative;top:-16px;}
+.link1:hover{color:#00ccff;padding:10px;position:relative;top:-16px;border-bottom: 2px solid #00ccff;border-top: 2px dotted #00ccff;}
 
   </style>
   <script>
@@ -175,9 +201,9 @@ text1 {
 
                  break;
    case 'p':for(var i=0;i<arr1.length;i++)
-                {arr1[i].style.border="2px solid white";
-                 arr1[i].style.backgroundColor=" white";
-                 arr1[i].style.boxShadow="0px 0px 10px 5px white";
+                {arr1[i].style.border="2px solid #9bc400";
+                 arr1[i].style.backgroundColor=" #9bc400";
+                 arr1[i].style.boxShadow="0px 0px 10px 5px #9bc400";
                  arr1[i].style.color="black";}
 
                 break;
@@ -228,8 +254,8 @@ text1 {
                           arr1[1].style.color="black";
                           }
                           {
-                           arr1[2].style.border="2px solid white";
-                           arr1[2].style.backgroundColor="white"
+                           arr1[2].style.border="2px solid orange";
+                           arr1[2].style.backgroundColor="orange"
                            arr1[2].style.color="black";
                            }
                            {
@@ -244,8 +270,8 @@ text1 {
                              arr1[4].style.color="black";
                              }
                              {
-                              arr1[5].style.border="2px solid white";
-                              arr1[5].style.backgroundColor="white ";
+                              arr1[5].style.border="2px solid orange";
+                              arr1[5].style.backgroundColor="orange ";
 
                               arr1[5].style.color="black";
                               }
@@ -277,14 +303,10 @@ text1 {
     }
 
   }
-  ////
-  ///
-
-
-  </script>
+</script>
 
 </head>
-<body bgcolor="black">
+<body bgcolor="white">
   <ul>
     <li style="float:right;">    <select id="inp1"style="padding-top:10px;padding-right:2%;border:none;" onchange="f1()">
               <option value="refresh">Refresh
@@ -300,18 +322,21 @@ text1 {
               <option value="d">d-block element
               <option value="f">f-block element
       </select></a></li>
-    <li style="float:right;"><a href="search.html">Search</a></li>
+    <li style="float:right;margin-right:10px;" ><a class="search" href="search.html">Search</a></li>
     <li><text1>SPIDER8019/Periodic Table</text1></li>
   </ul>
 
-    <table align="center">
+<div style="color:black;font-size:12px;position:relative;top:10px;margin-left:100px;">1</div>
+<div style="color:black;font-size:12px;position:relative;top:10px;margin-left:1245px;margin-top:-12px;">18</div>
+   <center>
+ <table align="center">
       <tr>
         <td class="td gas s metal"><div class="dropdown">
   <span>H</span>
   <div class="dropdown-content">
   <p style="color:black;font-family:exo;font-size:15px;">Hydrogen,1,<b>1.00784</b></p></div></div></td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">2</td>
-        <td style="color:black;border:none;">w</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">2</td>
+        <td style="color:white;border:none;"></td>
         <td style="color:black;border:none;"></td>
         <td style="color:black;border:none;"></td>
         <td style="color:black;border:none;"></td>
@@ -321,11 +346,11 @@ text1 {
         <td style="color:black;border:none;"></td>
         <td style="color:black;border:none;"></td>
         <td style="color:black;border:none;"></td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">13</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">14</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">15</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">16</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">17</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">13</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">14</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">15</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">16</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">17</td>
 
         <td class="td p gas noble"><div class="dropdown">
   <span>He</span>
@@ -341,7 +366,7 @@ text1 {
   <span>Be</span>
   <div class="dropdown-content">
   <p style="color:black;font-family:exo;font-size:15px;">Beryllium,4,<b>9.012182</b></p></div></div></td>
-        <td style="color:black;border:none;">3</td>
+        <td style="color:black;border:none;"></td>
         <td style="color:black;border:none;"></td>
         <td style="color:black;border:none;"></td>
         <td style="color:black;border:none;"></td>
@@ -384,16 +409,16 @@ text1 {
         <td class="td s solid metal dig"><div class="dropdown"><span>Mg</span>
         <div class="dropdown-content">
         <p style="color:black;font-family:exo;font-size:15px;">Magnesium,12,<b>24.305</b></p></div></div></td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">3</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">4</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">5</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">6</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">7</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">8</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">9</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">10</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">11</td>
-        <td style="color:white;border:none;position:relative;top:10px;font-size:12px;">12</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">3</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">4</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">5</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">6</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">7</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">8</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">9</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">10</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">11</td>
+        <td style="color:black;border:none;position:relative;top:10px;font-size:12px;">12</td>
         <td class="td p solid metal dig"><div class="dropdown"><span>Al</span>
         <div class="dropdown-content">
         <p style="color:black;font-family:exo;font-size:15px;">Alumunium,13,<b>26.982</b></p></div></div></td>
@@ -737,5 +762,43 @@ text1 {
         <td style="color:black;border:none;"></td>
       </tr>
     </table>
-  </body>
+</center>
+<div style="float:right;margin-top:4%;padding-right:20px;"><i>source of info.: </i><img style="position:relative;top:10px;" src="download.png" width="70";/></div>
+<p style="border:none;margin-top:100px;"></p>
+<div style="background-repeat:repeat-x;background-image:url('download1.jpg');height:30px;transform:rotate(3deg);"></div>
+<p style="font-family:exo;margin-left:30px;font-weight:bold;">Basic Terminology in Chemistry</br></br></p>
+<div style="margin-left:40px;font-family:nunito;">
+  <p><b>CHEMICAL FORMULA:</b> A chemical formula is a way of presenting information about the chemical proportions of atoms that constitute a particular chemical compound or molecule, using chemical element symbols, numbers, and sometimes also other symbols, such as parentheses, dashes, brackets, commas and plus and minus signs<a href="">@Wikipedia</a></br></br></p>
+  <p><b>ATOMIC NUMBER:</b> The atomic number or proton number (symbol Z) of a chemical element is the number of protons found in the nucleus of every atom of that element.<a href="">@Wikipedia</a></br></br></p>
+  <p><b>RELATIVE ATOMIC MASS:</b> Relative atomic mass or atomic weight is a dimensionless physical quantity defined as the ratio of the average mass of atoms of a chemical element in a given sample to the atomic mass constant. The atomic mass constant is defined as being of the mass of a carbon-12 atom<a href="https://en.wikipedia.org/wiki/Standard_atomic_weight" target="_blank">@Wikipedia</a></br></br></p>
+  <p><b>RADIOACTIVITY:</b> Radioactivity, property exhibited by certain types of matter of emitting energy and subatomic particles spontaneously. It is, in essence, an attribute of individual atomic nuclei.<a href="https://en.wikipedia.org/?title=Radioactivity&redirect=no" target="_blank">@Wikipedia</a></br></br></p>
+  <p><b>MOLARITY:</b> Molarity (M) is defined as the number of moles of solute per liter of solution. molarity = moles of solute/liters of solution. Molality (m) is defined as the number of moles of solute per kilogram of solvent.<a href="">@Wikipeida</a></br></br></p>
+  <p><b>MOLALITY:</b> Molality, also called molal concentration, is a measure of the concentration of a solute in a solution in terms of amount of substance in a specified amount of mass of the solvent. This contrasts with the definition of molarity which is based on a specified volume of solution<a href="">@Wikipedia</a></br></br></p>
+  <p><b>I.U.P.A.C:</b> The International Union of Pure and Applied Chemistry is an international federation of National Adhering Organizations that represents chemists in individual countries. It is a member of the International Science Council.<a href="">@Wikipedia</a></br></br></p>
+</div>
+<footer style="background-color:black;">
+  <br><br>
+  <center>
+    <p class="text3" class="animation1"><i>DON'T FORGET TO</i></p></br>
+    <p class="text2">FOLLOW US</p></br>
+    <a  class="link1" href="https://instagram.com/gururandhawa/?hl=en" target="_blank"><dfn title="SPIDER8019.WHEELS/Instagram official"</dfn>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+    </a>
+    <a class="link1" href="https://instagram.com/gururandhawa/?hl=en" target="_blank"><dfn title="SPIDER8019.WHEELS/Youtube official"</dfn>
+    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+    </a>
+    <a class="link1" href="https://instagram.com/gururandhawa/?hl=en" target="_blank"><dfn title="SPIDER8019.WHEELS/Facebook official"</dfn>
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+    </a>
+    <a class="link1" href="https://instagram.com/gururandhawa/?hl=en" target="_blank"><dfn title="SPIDER8019.WHEELS/Snapchat official"</dfn>
+      <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+    </a>
+    <a class="link1" href="https://instagram.com/gururandhawa/?hl=en" target="_blank"><dfn title="SPIDER8019.WHEELS/Twitter official"</dfn>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+    </a>
+    <p class="text4">@2020,SPIDER8019. All Rights are reserved</p>
+  </center>
+  <br><br>
+</footer>
+</body>
 </html>
